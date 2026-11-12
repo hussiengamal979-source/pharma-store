@@ -1,6 +1,0 @@
-{
-  "name": "Chefaa Navbar Clone",
-  "description": "Pixel-perfect, clean recreation of Chefaa online pharmacy navigation bar with promo announcement, location alert, search, cart, and Arabic category links.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

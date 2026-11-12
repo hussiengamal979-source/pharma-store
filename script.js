@@ -6,12 +6,46 @@
  * ============================================================================
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  let productData;
+
+  try {
+    const response = await fetch('./data/products.json');
+    if (!response.ok) {
+      throw new Error(`Failed to load products: ${response.status} ${response.statusText}`);
+    }
+    productData = await response.json();
+  } catch (error) {
+    console.error('Unable to load product data.', error);
+    return;
+  }
+
+  Object.entries(productData.products).forEach(([gridId, products]) => {
+    const grid = document.getElementById(gridId);
+    if (!grid) {
+      throw new Error(`Missing product grid: ${gridId}`);
+    }
+
+    grid.innerHTML = products.map((product) => `
+      <article class="product-card${product.featured ? ' card-featured' : ''}">
+        <div class="product-image-container">
+          <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy" />
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">${product.name}</h3>
+          <div class="product-price">
+            <span>${product.price}</span>
+            <span style="padding-inline-start:8px;">${productData.currency}</span>
+          </div>
+          <button type="button" class="btn-add-to-cart" data-product="${product.cartName}">اضف الى العربة</button>
+        </div>
+      </article>
+    `).join('');
+  });
 
   // --------------------------------------------------------------------------
   // 1. Element Selectors
   // --------------------------------------------------------------------------
-  // All Add to Cart buttons across all sections
   const addToCartButtons = document.querySelectorAll('.btn-add-to-cart');
   const cartBadgeCount = document.getElementById('cartBadgeCount');
   const btnScrollTop = document.getElementById('btnScrollTop');
@@ -123,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Setup all carousels
   setupCarousel('skincarePrevBtn', 'skincareNextBtn', 'skincare-grid');
   setupCarousel('grapexonPrevBtn', 'grapexonNextBtn', 'grapexon-grid');
   setupCarousel('forHerPrevBtn', 'forHerNextBtn', 'for-her-grid');
@@ -165,5 +198,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
 });

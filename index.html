@@ -9,34 +9,24 @@
     <meta property="og:description" content="عروض وخصومات صيدلية شفاء مصر على أفضل الماركات." />
     <meta property="og:type" content="website" />
 
-    <!-- Google Arabic Font: Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Pure CSS stylesheet -->
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-
-    <!-- ======================================================================
-         MAIN PAGE WRAPPER
-         ====================================================================== -->
     <div class="page-wrapper">
-
-      <!-- ====================================================================
-           SECTION 1: NIVEA HERO BANNER & PRODUCTS
-           ==================================================================== -->
+      <!-- بانر نيفيا الترويجي -->
       <section class="promo-banner-wrapper" style="margin-top: 18px;">
         <img
-          src="./assets/nivea_banner.png"
+          src="./assets/nivea_banner.webp"
           alt="نيفيا - بشرة ناعمة كل يوم - اطلب الآن"
           class="promo-banner-img"
           loading="eager"
         />
       </section>
 
-      <!-- Section 1 Header: "عرض الكل >" -->
+      <!-- منتجات نيفيا -->
       <div class="section-header-row">
         <a href="#nivea-products" class="view-all-link">
           <span>عرض الكل</span>
@@ -45,68 +35,9 @@
           </svg>
         </a>
       </div>
+      <section class="products-grid" id="nivea-products"></section>
 
-      <!-- Section 1 Products Grid (5 Nivea Products) -->
-      <section class="products-grid" id="nivea-products">
-        <article class="product-card">
-          <div class="product-image-container">
-            <img src="./assets/product_1.png" alt="نيفيا | سوفت كريم مرطب ومنعش للجسم | 100مل" class="product-image" loading="lazy" />
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">نيفيا | سوفت كريم مرطب ومنعش للجسم | 100مل</h3>
-            <div class="product-price">80 جنيه</div>
-            <button type="button" class="btn-add-to-cart" data-product="نيفيا سوفت كريم 100مل">اضف الى العربة</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image-container">
-            <img src="./assets/product_2.png" alt="نيفيا صن بلوك سبراي مرطب وواقى من الشمس | 200 مل" class="product-image" loading="lazy" />
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">نيفيا صن بلوك سبراي مرطب وواقى من الشمس | 200 مل</h3>
-            <div class="product-price">440 جنيه</div>
-            <button type="button" class="btn-add-to-cart" data-product="نيفيا صن بلوك سبراي 200 مل">اضف الى العربة</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image-container">
-            <img src="./assets/product_3.png" alt="نيفيا | سوفت كريم مرطب ومنعش للجسم | 50مل" class="product-image" loading="lazy" />
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">نيفيا | سوفت كريم مرطب ومنعش للجسم | 50مل</h3>
-            <div class="product-price">48 جنيه</div>
-            <button type="button" class="btn-add-to-cart" data-product="نيفيا سوفت كريم 50مل">اضف الى العربة</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image-container">
-            <img src="./assets/product_4.png" alt="نيفيا صن بلوك لوشن واقي الشمس للحماية والترطيب |" class="product-image" loading="lazy" />
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">نيفيا صن بلوك لوشن واقي الشمس للحماية والترطيب |</h3>
-            <div class="product-price">950 جنيه</div>
-            <button type="button" class="btn-add-to-cart" data-product="نيفيا صن بلوك لوشن واقي الشمس">اضف الى العربة</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image-container">
-            <img src="./assets/product_5.png" alt="نيفيا | لوشن للترطيب والحماية من أشعة الشمس | 200مل" class="product-image" loading="lazy" />
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">نيفيا | لوشن للترطيب والحماية من أشعة الشمس | 200مل</h3>
-            <div class="product-price">650 جنيه</div>
-            <button type="button" class="btn-add-to-cart" data-product="نيفيا لوشن للترطيب والحماية بعد الشمس">اضف الى العربة</button>
-          </div>
-        </article>
-      </section>
-
-      <!-- ====================================================================
-           SECTION 2: BEST-SELLING SKINCARE PRODUCTS ("منتجات البشرة الأكثر مبيعًا 💯")
-           ==================================================================== -->
+      <!-- منتجات العناية بالبشرة الأكثر مبيعًا -->
       <section style="margin-top: 55px;">
         <div class="section-header-row">
           <h2 class="section-main-title">
@@ -120,7 +51,6 @@
             </svg>
           </a>
         </div>
-
         <div class="carousel-wrapper">
           <button type="button" class="carousel-nav-btn prev" id="skincarePrevBtn" aria-label="السابق">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -128,81 +58,28 @@
           <button type="button" class="carousel-nav-btn next" id="skincareNextBtn" aria-label="التالي">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </button>
-
-          <div class="products-grid" id="skincare-grid">
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section2/bestseller_1.png" alt="نيفيا | بودي لوشن الجسم المغذي بزيت اللوز للبشرة الجافة" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">نيفيا | بودي لوشن الجسم المغذي بزيت اللوز للبشرة الجافة</h3>
-                <div class="product-price">290 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="نيفيا بودي لوشن المغذي">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section2/bestseller_2.png" alt="غسول انفنتي للبشره الجافة بحمض الهيالورونيك والكولاجين |" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">غسول انفنتي للبشره الجافة بحمض الهيالورونيك والكولاجين |</h3>
-                <div class="product-price">450 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="غسول انفنتي للبشرة الجافة">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <article class="product-card card-featured">
-              <div class="product-image-container">
-                <img src="./assets/section2/bestseller_3.png" alt="افوفا | العجينة الحمراء المخملية الحمراء للوجه" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">افوفا | العجينة الحمراء المخملية الحمراء للوجه</h3>
-                <div class="product-price">40 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="افوفا العجينة الحمراء للوجه">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section2/bestseller_4.png" alt="1+1 انفينيتي | جل واقي من الشمس بعامل حماية 50 مضاد" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">1+1 انفينيتي | جل واقي من الشمس بعامل حماية 50 مضاد</h3>
-                <div class="product-price">350 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="انفينيتي جل واقي الشمس 1+1">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section2/bestseller_5.png" alt="انيفاجين | 7 امبولات متعددة الجرعة | 5مل" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">انيفاجين | 7 امبولات متعددة الجرعة | 5مل</h3>
-                <div class="product-price">1550 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="انيفاجين 7 أمبولات للشعر">اضف الى العربة</button>
-              </div>
-            </article>
-          </div>
+          <div class="products-grid" id="skincare-grid"></div>
         </div>
       </section>
 
-      <!-- ====================================================================
-           SECTION 3: GRAPEXON WEIGHT LOSS SECTION ("كل اللي محتاجه لرحلة خسارة الوزن")
-           ==================================================================== -->
+      <!-- بانر جريبكسون ومنتجاته -->
       <section style="margin-top: 55px;">
         <div class="promo-banner-wrapper">
-          <img src="./assets/section3/grapexon_banner.png" alt="جريبكسون - كل اللي محتاجه لرحلة خسارة الوزن" class="promo-banner-img" loading="lazy" />
+          <img
+            src="./assets/section3/grapexon_banner.webp"
+            alt="جريبكسون - كل اللي محتاجه لرحلة خسارة الوزن"
+            class="promo-banner-img"
+            loading="lazy"
+          />
         </div>
-
         <div class="section-header-row" style="margin-top: 20px;">
           <a href="#grapexon-products" class="view-all-link">
             <span>عرض الكل</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
           </a>
         </div>
-
         <div class="carousel-wrapper">
           <div class="grapexon-container-box">
             <button type="button" class="carousel-nav-btn prev" id="grapexonPrevBtn" aria-label="السابق">
@@ -211,70 +88,12 @@
             <button type="button" class="carousel-nav-btn next" id="grapexonNextBtn" aria-label="التالي">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
             </button>
-
-            <div class="products-grid" id="grapexon-grid">
-              <article class="product-card">
-                <div class="product-image-container">
-                  <img src="./assets/section3/grapexon_1.png" alt="جريبكسون ادفانس | 30 كبسولة" class="product-image" loading="lazy" />
-                </div>
-                <div class="product-details">
-                  <h3 class="product-title">جريبكسون ادفانس | 30 كبسولة</h3>
-                  <div class="product-price">285 جنيه</div>
-                  <button type="button" class="btn-add-to-cart" data-product="جريبكسون ادفانس 30 كبسولة">اضف الى العربة</button>
-                </div>
-              </article>
-
-              <article class="product-card">
-                <div class="product-image-container">
-                  <img src="./assets/section3/grapexon_2.png" alt="جريبكسون كريم | 100مل" class="product-image" loading="lazy" />
-                </div>
-                <div class="product-details">
-                  <h3 class="product-title">جريبكسون كريم | 100مل</h3>
-                  <div class="product-price">290 جنيه</div>
-                  <button type="button" class="btn-add-to-cart" data-product="جريبكسون كريم 100مل">اضف الى العربة</button>
-                </div>
-              </article>
-
-              <article class="product-card">
-                <div class="product-image-container">
-                  <img src="./assets/section3/grapexon_3.png" alt="جريبكسون جل | 100جم" class="product-image" loading="lazy" />
-                </div>
-                <div class="product-details">
-                  <h3 class="product-title">جريبكسون جل | 100جم</h3>
-                  <div class="product-price">350 جنيه</div>
-                  <button type="button" class="btn-add-to-cart" data-product="جريبكسون جل 100جم">اضف الى العربة</button>
-                </div>
-              </article>
-
-              <article class="product-card">
-                <div class="product-image-container">
-                  <img src="./assets/section3/grapexon_4.png" alt="جريبكسون كت | 30 قرص" class="product-image" loading="lazy" />
-                </div>
-                <div class="product-details">
-                  <h3 class="product-title">جريبكسون كت | 30 قرص</h3>
-                  <div class="product-price">300 جنيه</div>
-                  <button type="button" class="btn-add-to-cart" data-product="جريبكسون كت 30 قرص">اضف الى العربة</button>
-                </div>
-              </article>
-
-              <article class="product-card">
-                <div class="product-image-container">
-                  <img src="./assets/section3/grapexon_5.png" alt="جريبكسون كروميوم | 30 كبسولة" class="product-image" loading="lazy" />
-                </div>
-                <div class="product-details">
-                  <h3 class="product-title">جريبكسون كروميوم | 30 كبسولة</h3>
-                  <div class="product-price">180 جنيه</div>
-                  <button type="button" class="btn-add-to-cart" data-product="جريبكسون كروميوم 30 كبسولة">اضف الى العربة</button>
-                </div>
-              </article>
-            </div>
+            <div class="products-grid" id="grapexon-grid"></div>
           </div>
         </div>
       </section>
 
-      <!-- ====================================================================
-           SECTION 4: FOR HER ("لها 💄💅")
-           ==================================================================== -->
+      <!-- منتجات العناية للنساء -->
       <section style="margin-top: 55px;">
         <div class="section-header-row">
           <h2 class="section-main-title">
@@ -286,7 +105,6 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </a>
         </div>
-
         <div class="carousel-wrapper">
           <button type="button" class="carousel-nav-btn prev" id="forHerPrevBtn" aria-label="السابق">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -294,74 +112,11 @@
           <button type="button" class="carousel-nav-btn next" id="forHerNextBtn" aria-label="التالي">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </button>
-
-          <div class="products-grid" id="for-her-grid">
-            <!-- 1. نيفيا رول اون 75 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_for_her/prod_1.png" alt="نيفيا | راحة جافة رول اون مزيل عرق للنساء | 50مل" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">نيفيا | راحة جافة رول اون مزيل عرق للنساء | 50مل</h3>
-                <div class="product-price">75 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="نيفيا رول اون للنساء 50مل">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 2. ماء ميسيلار بماء الورد 320 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_for_her/prod_2.png" alt="ماء ميسيلار نيفيا مزيل للمكياج بماء الورد | 400 مل" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">ماء ميسيلار نيفيا مزيل للمكياج بماء الورد | 400 مل</h3>
-                <div class="product-price">320 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="ماء ميسيلار بماء الورد 400 مل">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 3. رو افريكان شامبو بزيت الارجان 350 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_for_her/prod_3.png" alt="رو افريكان | شامبو بزيت الارجان | 300مل" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">رو افريكان | شامبو بزيت الارجان | 300مل</h3>
-                <div class="product-price">350 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="رو افريكان شامبو بزيت الارجان">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 4. اولويز ماكسي سميكة 35 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_for_her/prod_4.png" alt="أولويز | نعومة القطن ماكسي سميكة فوط صحية طويلة" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">أولويز | نعومة القطن ماكسي سميكة فوط صحية طويلة</h3>
-                <div class="product-price">35 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="أولويز نعومة القطن ماكسي">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 5. كيرفري بلس فوط صحية يومية 100 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_for_her/prod_5.png" alt="كم فري | بلس فوط صحية يومية عطر خفيف كبيره | 20" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">كم فري | بلس فوط صحية يومية عطر خفيف كبيره | 20</h3>
-                <div class="product-price">100 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="كير فري بلس فوط يومية">اضف الى العربة</button>
-              </div>
-            </article>
-          </div>
+          <div class="products-grid" id="for-her-grid"></div>
         </div>
       </section>
 
-      <!-- ====================================================================
-           SECTION 5: BEST HAIR CARE PRODUCTS ("أفضل منتجات العناية بالشعر 💇")
-           ==================================================================== -->
+      <!-- منتجات العناية بالشعر -->
       <section style="margin-top: 55px;">
         <div class="section-header-row">
           <h2 class="section-main-title">
@@ -373,7 +128,6 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </a>
         </div>
-
         <div class="carousel-wrapper">
           <button type="button" class="carousel-nav-btn prev" id="haircarePrevBtn" aria-label="السابق">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -381,74 +135,11 @@
           <button type="button" class="carousel-nav-btn next" id="haircareNextBtn" aria-label="التالي">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </button>
-
-          <div class="products-grid" id="haircare-grid">
-            <!-- 1. كلاري بوستر شوت 450 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_haircare/prod_1.png" alt="كلاري | بوستر شوت | 50مل" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">كلاري | بوستر شوت | 50مل</h3>
-                <div class="product-price">450 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="كلاري بوستر شوت 50مل">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 2. رو افريكان قناع الشعر مايا 305 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_haircare/prod_2.png" alt="رو افريكان | قناع الشعر مايا | 250جم" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">رو افريكان | قناع الشعر مايا | 250جم</h3>
-                <div class="product-price">305 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="رو افريكان ماسك مايا 250جم">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 3. زيت رو افريكان فوليكال بوستر 285 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_haircare/prod_3.png" alt="زيت رو افريكان فوليكال بوستر للشعر | follicle booster | 100 مل" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">زيت رو افريكان فوليكال بوستر للشعر | follicle booster | 100 مل</h3>
-                <div class="product-price">285 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="زيت رو افريكان فوليكال بوستر">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 4. سيروبايب ليف ان 345 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_haircare/prod_4.png" alt="سيروبايب ليف ان للشعر المتساقط والجاف والكيرلي |" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">سيروبايب ليف ان للشعر المتساقط والجاف والكيرلي |</h3>
-                <div class="product-price">345 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="سيروبايب ليف ان للشعر">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 5. سيروبايب امبولات 455 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_haircare/prod_5.png" alt="سيروبايب | أمبولات للشعر لتحفيز نموه وعلاج التساقط | 10امل 7" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">سيروبايب | أمبولات للشعر لتحفيز نموه وعلاج التساقط | 10امل 7</h3>
-                <div class="product-price">455 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="سيروبايب أمبولات تحفيز نمو الشعر">اضف الى العربة</button>
-              </div>
-            </article>
-          </div>
+          <div class="products-grid" id="haircare-grid"></div>
         </div>
       </section>
 
-      <!-- ====================================================================
-           SECTION 6: ALL YOUR BABY NEEDS ("كل ما يحتاجه طفلك 🚼")
-           ==================================================================== -->
+      <!-- منتجات العناية بالطفل -->
       <section style="margin-top: 55px;">
         <div class="section-header-row">
           <h2 class="section-main-title">
@@ -460,7 +151,6 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </a>
         </div>
-
         <div class="carousel-wrapper">
           <button type="button" class="carousel-nav-btn prev" id="babyPrevBtn" aria-label="السابق">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -468,74 +158,10 @@
           <button type="button" class="carousel-nav-btn next" id="babyNextBtn" aria-label="التالي">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </button>
-
-          <div class="products-grid" id="baby-grid">
-            <!-- 1. انشور فانيليا 530 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_baby/prod_1.png" alt="انشور | بودر مكمل غذائي فانيليا | 400جم" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">انشور | بودر مكمل غذائي فانيليا | 400جم</h3>
-                <div class="product-price">530 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="انشور مكمل غذائي فانيليا 400جم">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 2. جونسون زيت سليب تايم باللافندر 130 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_baby/prod_2.png" alt="جونسون | زيت سليب تايم البنفسجي باللافندر للأطفال |" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">جونسون | زيت سليب تايم البنفسجي باللافندر للأطفال |</h3>
-                <div class="product-price">130 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="جونسون زيت سليب تايم باللافندر">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 3. مولفيكس حفاضات كومفورت 80 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_baby/prod_3.png" alt="مولفيكس | حفاضات كومفورت فيكس عبوه صغيره لحديثي" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">مولفيكس | حفاضات كومفورت فيكس عبوه صغيره لحديثي</h3>
-                <div class="product-price">80 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="مولفيكس حفاضات كومفورت">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 4. هابينيس لوشن ترطيب 180 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_baby/prod_4.png" alt="هابينيس | لوشن ترطيب الجلد للاطفال | 150مل" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">هابينيس | لوشن ترطيب الجلد للاطفال | 150مل</h3>
-                <div class="product-price">180 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="هابينيس لوشن ترطيب للأطفال">اضف الى العربة</button>
-              </div>
-            </article>
-
-            <!-- 5. سانوسان شامبو بالعسل 120 جنيه -->
-            <article class="product-card">
-              <div class="product-image-container">
-                <img src="./assets/section_baby/prod_5.png" alt="سانوسان | بيبي شامبو بالعسل واللبن | 200مل" class="product-image" loading="lazy" />
-              </div>
-              <div class="product-details">
-                <h3 class="product-title">سانوسان | بيبي شامبو بالعسل واللبن | 200مل</h3>
-                <div class="product-price">120 جنيه</div>
-                <button type="button" class="btn-add-to-cart" data-product="سانوسان شامبو أطفال بالعسل واللبن">اضف الى العربة</button>
-              </div>
-            </article>
-          </div>
+          <div class="products-grid" id="baby-grid"></div>
         </div>
       </section>
-
     </div>
-
-    <!-- Pure JavaScript -->
     <script type="module" src="./script.js"></script>
   </body>
 </html>

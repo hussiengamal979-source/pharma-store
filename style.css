@@ -11,7 +11,7 @@
    1. Theme Variables
    -------------------------------------------------------------------------- */
 :root {
-  --primary-green: #00ba88;
+  --primary-green: #00cd7c;
   --primary-green-hover: #009e74;
   --primary-green-active: #008762;
   --navy-dark: #122842;
@@ -25,7 +25,7 @@
   --card-bg: #ffffff;
   --grapexon-bg: #eef2f6;
   --font-arabic: 'Cairo', system-ui, -apple-system, sans-serif;
-  --max-width: 1390px;
+  --max-width: 1140px;
 }
 
 /* --------------------------------------------------------------------------
@@ -76,6 +76,7 @@ button {
   margin-bottom: 24px;
   overflow: hidden;
   border-radius: 12px;
+  cursor:pointer;
 }
 
 .promo-banner-img {
@@ -91,7 +92,7 @@ button {
 .section-header-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
   margin: 28px 0 20px;
   padding: 0 4px;
 }
@@ -176,30 +177,20 @@ button {
 }
 
 /* Reusable Product Card */
-.product-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-card);
-  border-radius: 12px;
+.product-card {  
   padding: 16px 14px 18px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   position: relative;
-}
-
-.product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-  border-color: var(--border-hover);
+  cursor:pointer;
 }
 
 /* Featured / Active Card (Avuva box) */
-.product-card.card-featured {
+  .product-card.card-featured {
   border-color: #cbd5e1;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-}
+} 
 
 /* Product Image Box */
 .product-image-container {
@@ -219,9 +210,6 @@ button {
   transition: transform 0.25s ease;
 }
 
-.product-card:hover .product-image {
-  transform: scale(1.04);
-}
 
 /* Product Details */
 .product-details {
@@ -244,7 +232,7 @@ button {
 }
 
 .product-price {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--text-title);
   margin-bottom: 14px;
@@ -254,11 +242,13 @@ button {
 /* Add to Cart Button ("اضف الى العربة") */
 .btn-add-to-cart {
   width: 100%;
-  height: 44px;
   background-color: var(--primary-green);
+  border: 1px solid var(--primary-green);
   color: #ffffff;
-  font-size: 15px;
-  font-weight: 700;
+  padding-bottom:7px;
+  padding-top:7px;
+  font-size: 12px;
+  font-weight: 300;
   border-radius: 8px;
   display: flex;
   align-items: center;
