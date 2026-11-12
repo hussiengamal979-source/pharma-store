@@ -1,0 +1,446 @@
+/* ==========================================================================
+   Chefaa - Pure CSS (Optimized, No Repetition, Fully Responsive)
+   Includes:
+   - Section 1: Nivea Hero Banner & Products
+   - Section 2: Best-Selling Skincare ("منتجات البشرة الأكثر مبيعًا 💯")
+   - Section 3: Grapexon Weight Loss Journey ("كل اللي محتاجه لرحلة خسارة الوزن")
+   - Floating Action Controls
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Theme Variables
+   -------------------------------------------------------------------------- */
+:root {
+  --primary-green: #00ba88;
+  --primary-green-hover: #009e74;
+  --primary-green-active: #008762;
+  --navy-dark: #122842;
+  --whatsapp-green: #00c67f;
+  --text-dark: #1e293b;
+  --text-title: #0f172a;
+  --text-gray: #334155;
+  --border-card: #f0f2f5;
+  --border-hover: #e2e8f0;
+  --bg-page: #ffffff;
+  --card-bg: #ffffff;
+  --grapexon-bg: #eef2f6;
+  --font-arabic: 'Cairo', system-ui, -apple-system, sans-serif;
+  --max-width: 1390px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Global Resets
+   -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-arabic);
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+  direction: rtl; /* Right-to-Left Arabic Layout */
+  text-align: right;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   3. Page Layout Wrapper
+   -------------------------------------------------------------------------- */
+.page-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px 80px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Promotional Banners (Nivea & Grapexon)
+   -------------------------------------------------------------------------- */
+.promo-banner-wrapper {
+  width: 100%;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.promo-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Reusable Section Headers
+   -------------------------------------------------------------------------- */
+.section-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 28px 0 20px;
+  padding: 0 4px;
+}
+
+/* Section Title */
+.section-main-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--text-title);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Simple Text Link ("عرض الكل >") */
+.view-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  transition: color 0.15s;
+}
+
+.view-all-link:hover {
+  color: var(--primary-green);
+}
+
+.view-all-link svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.5;
+}
+
+/* Outlined Green Button ("< عرض الكل") */
+.btn-view-all-outlined {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid var(--primary-green);
+  color: var(--primary-green);
+  background-color: transparent;
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-view-all-outlined:hover {
+  background-color: var(--primary-green);
+  color: #ffffff;
+}
+
+.btn-view-all-outlined svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.5;
+}
+
+/* --------------------------------------------------------------------------
+   6. Reusable Products Carousel & Grid (Unified across all sections)
+   -------------------------------------------------------------------------- */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Section 3 Grapexon container background */
+.grapexon-container-box {
+  background-color: var(--grapexon-bg);
+  border-radius: 16px;
+  padding: 22px 20px;
+  position: relative;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+/* Reusable Product Card */
+.product-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  padding: 16px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--border-hover);
+}
+
+/* Featured / Active Card (Avuva box) */
+.product-card.card-featured {
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Product Image Box */
+.product-image-container {
+  width: 100%;
+  height: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  padding: 6px;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.04);
+}
+
+/* Product Details */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-gray);
+  line-height: 1.5;
+  min-height: 44px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-title);
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+}
+
+/* Add to Cart Button ("اضف الى العربة") */
+.btn-add-to-cart {
+  width: 100%;
+  height: 44px;
+  background-color: var(--primary-green);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-add-to-cart:hover {
+  background-color: var(--primary-green-hover);
+}
+
+.btn-add-to-cart:active {
+  background-color: var(--primary-green-active);
+  transform: scale(0.98);
+}
+
+.btn-add-to-cart.added {
+  background-color: #008762;
+}
+
+/* Carousel Navigation Arrows */
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  z-index: 10;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.carousel-nav-btn:hover {
+  background: #f8fafc;
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.carousel-nav-btn.prev {
+  right: -16px;
+}
+
+.carousel-nav-btn.next {
+  left: -16px;
+}
+
+.carousel-nav-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.6;
+}
+
+/* --------------------------------------------------------------------------
+   7. Fixed Floating Buttons (Scroll to top & WhatsApp)
+   -------------------------------------------------------------------------- */
+.btn-scroll-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--navy-dark);
+  color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(18, 40, 66, 0.35);
+  cursor: pointer;
+  z-index: 99;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-scroll-top:hover {
+  background-color: #0a1829;
+  transform: translateY(-3px);
+}
+
+.btn-scroll-top svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2.6;
+}
+
+.btn-whatsapp-chat {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 54px;
+  height: 54px;
+  background-color: var(--whatsapp-green);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 198, 127, 0.45);
+  cursor: pointer;
+  z-index: 99;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-whatsapp-chat:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 198, 127, 0.55);
+}
+
+.btn-whatsapp-chat svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   8. Interactive Toast Notification
+   -------------------------------------------------------------------------- */
+.toast-box {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #1e293b;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.toast-box.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   9. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-main-title {
+    font-size: 20px;
+  }
+  .btn-view-all-outlined {
+    padding: 5px 12px;
+    font-size: 13px;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .carousel-nav-btn {
+    display: none;
+  }
+  .btn-scroll-top {
+    left: 16px;
+    bottom: 20px;
+  }
+  .btn-whatsapp-chat {
+    right: 16px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
