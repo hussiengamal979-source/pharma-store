@@ -65,6 +65,7 @@ button {
 .page-wrapper {
   max-width: var(--max-width);
   margin: 0 auto;
+  overflow-x: hidden;
   padding: 0 16px 80px;
 }
 
@@ -73,9 +74,8 @@ button {
    -------------------------------------------------------------------------- */
 .promo-banner-wrapper {
   width: 100%;
+  height: auto;
   margin-bottom: 24px;
-  overflow: hidden;
-  border-radius: 12px;
   cursor:pointer;
 }
 
@@ -83,7 +83,7 @@ button {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -92,7 +92,7 @@ button {
 .section-header-row {
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: space-between;
   margin: 28px 0 20px;
   padding: 0 4px;
 }
@@ -104,7 +104,7 @@ button {
   color: var(--text-title);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 /* Simple Text Link ("عرض الكل >") */
@@ -160,20 +160,94 @@ button {
 .carousel-wrapper {
   position: relative;
   width: 100%;
+  padding: 0px 18px 34px;
+
 }
 
 /* Section 3 Grapexon container background */
 .grapexon-container-box {
   background-color: var(--grapexon-bg);
-  border-radius: 16px;
   padding: 22px 20px;
   position: relative;
+}
+
+.grapexon-banner {
+  margin-bottom: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.grapexon-banner .promo-banner-img {
+  border-radius: 0;
+}
+
+.grapexon-header-row {
+  direction: ltr;
+  justify-content: flex-start;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.grapexon-header-row .view-all-link {
+  direction: rtl;
 }
 
 .products-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+}
+
+/* شبكات المنتجات داخل الكاروسيل تتحرك أفقيًا، بينما تبقى شبكة نيفيا عادية. */
+.carousel-wrapper .products-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel-wrapper .products-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-wrapper .product-card {
+  flex: 0 0 calc((100% - 80px) / 5);
+  scroll-snap-align: start;
+}
+
+.grapexon-container-box .products-grid {
+  gap: 14px;
+}
+
+.grapexon-container-box .product-card {
+  flex-basis: calc((100% - 56px) / 5);
+  padding: 8px;
+  background: #ffffff;
+  border-radius: 9px;
+}
+
+.grapexon-container-box .product-image-container {
+  height: 135px;
+  margin-bottom: 8px;
+  padding: 4px;
+}
+
+.grapexon-container-box .product-image {
+  max-height: 120px;
+}
+
+.grapexon-container-box .product-title {
+  margin-bottom: 8px;
+}
+
+.grapexon-container-box .carousel-nav-btn.prev {
+  right: auto;
+  left: -16px;
+}
+
+.grapexon-container-box .carousel-nav-btn.next {
+  left: auto;
+  right: -16px;
 }
 
 /* Reusable Product Card */
@@ -186,11 +260,16 @@ button {
   cursor:pointer;
 }
 
-/* Featured / Active Card (Avuva box) */
-  .product-card.card-featured {
-  border-color: #cbd5e1;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-} 
+/* تأثير التمرير خاص بقسم البشرة فقط؛ غيّر #skincare-grid لقسم آخر. */
+#skincare-grid .product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#skincare-grid .product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+}
 
 /* Product Image Box */
 .product-image-container {
@@ -402,6 +481,12 @@ button {
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .carousel-wrapper .product-card {
+    flex-basis: calc((100% - 40px) / 3);
+  }
+  .grapexon-container-box .product-card {
+    flex-basis: calc((100% - 28px) / 3);
+  }
 }
 
 @media (max-width: 768px) {
@@ -415,6 +500,12 @@ button {
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
+  }
+  .carousel-wrapper .product-card {
+    flex-basis: calc((100% - 14px) / 2);
+  }
+  .grapexon-container-box .product-card {
+    flex-basis: calc((100% - 14px) / 2);
   }
   .carousel-nav-btn {
     display: none;
@@ -432,5 +523,11 @@ button {
 @media (max-width: 480px) {
   .products-grid {
     grid-template-columns: 1fr;
+  }
+  .carousel-wrapper .product-card {
+    flex-basis: 85%;
+  }
+  .grapexon-container-box .product-card {
+    flex-basis: 85%;
   }
 }

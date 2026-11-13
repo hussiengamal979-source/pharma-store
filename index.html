@@ -28,7 +28,7 @@
 
       <!-- منتجات نيفيا -->
       <div class="section-header-row">
-        <a href="#nivea-products" class="view-all-link">
+        <a href="#nivea-products" class="view-all-link" style="display:flex;align-items:center;justify-content:flex-end;width:100%;">
           <span>عرض الكل</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <polyline points="15 18 9 12 15 6"></polyline>
@@ -63,8 +63,8 @@
       </section>
 
       <!-- بانر جريبكسون ومنتجاته -->
-      <section style="margin-top: 55px;">
-        <div class="promo-banner-wrapper">
+      <section style="margin-top: 55px; border-radius:12px;overflow:hidden;">
+        <div class="promo-banner-wrapper grapexon-banner">
           <img
             src="./assets/section3/grapexon_banner.webp"
             alt="جريبكسون - كل اللي محتاجه لرحلة خسارة الوزن"
@@ -72,16 +72,17 @@
             loading="lazy"
           />
         </div>
-        <div class="section-header-row" style="margin-top: 20px;">
-          <a href="#grapexon-products" class="view-all-link">
-            <span>عرض الكل</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </a>
-        </div>
-        <div class="carousel-wrapper">
-          <div class="grapexon-container-box">
+
+        <div class="grapexon-container-box">
+          <div class="section-header-row grapexon-header-row">
+            <a href="#grapexon-products" class="view-all-link">
+              <span>عرض الكل</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </a>
+          </div>
+          <div class="carousel-wrapper">
             <button type="button" class="carousel-nav-btn prev" id="grapexonPrevBtn" aria-label="السابق">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
@@ -162,6 +163,23 @@
         </div>
       </section>
     </div>
+
+    <!-- قالب بطاقة المنتج: ينسخه JavaScript لكل منتج ويملأ بياناته. -->
+    <template id="product-card-template">
+      <article class="product-card">
+        <div class="product-image-container">
+          <img class="product-image" loading="lazy" />
+        </div>
+        <div class="product-details">
+          <h3 class="product-title"></h3>
+          <div class="product-price">
+            <span class="product-price-value"></span>
+            <span style="padding-inline-start:8px;" class="product-currency"></span>
+          </div>
+          <button type="button" class="btn-add-to-cart">اضف الى العربة</button>
+        </div>
+      </article>
+    </template>
     <script type="module" src="./script.js"></script>
   </body>
 </html>

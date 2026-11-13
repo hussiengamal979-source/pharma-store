@@ -20,27 +20,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
+  const cardTemplate = document.getElementById('product-card-template');
+
   Object.entries(productData.products).forEach(([gridId, products]) => {
     const grid = document.getElementById(gridId);
     if (!grid) {
       throw new Error(`Missing product grid: ${gridId}`);
     }
 
-    grid.innerHTML = products.map((product) => `
-      <article class="product-card${product.featured ? ' card-featured' : ''}">
-        <div class="product-image-container">
-          <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy" />
-        </div>
-        <div class="product-details">
-          <h3 class="product-title">${product.name}</h3>
-          <div class="product-price">
-            <span>${product.price}</span>
-            <span style="padding-inline-start:8px;">${productData.currency}</span>
-          </div>
-          <button type="button" class="btn-add-to-cart" data-product="${product.cartName}">اضف الى العربة</button>
-        </div>
-      </article>
-    `).join('');
+    products.forEach((product) => {
+      const card = cardTemplate.content.firstElementChild.cloneNode(true);
+      const image = card.querySelector('.product-image');
+
+      image.src = product.image;
+      image.alt = product.name;
+      card.querySelector('.product-title').textContent = product.name;
+      card.querySelector('.product-price-value').textContent = product.price;
+      card.querySelector('.product-currency').textContent = productData.currency;
+      card.querySelector('.btn-add-to-cart').dataset.product = product.cartName;
+      grid.append(card);
+    });
   });
 
   // --------------------------------------------------------------------------
@@ -146,15 +145,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (!prevBtn || !nextBtn || !grid) return;
 
-    prevBtn.addEventListener('click', () => {
-      // In RTL, prev button scrolls toward the right
-      grid.scrollBy({ left: 300, behavior: 'smooth' });
-    });
+    const scrollByCard = (direction) => {
+      const card = grid.querySelector('.product-card');
+      if (!card) return;
 
-    nextBtn.addEventListener('click', () => {
-      // In RTL, next button scrolls toward the left
-      grid.scrollBy({ left: -300, behavior: 'smooth' });
-    });
+      const gap = parseFloat(getComputedStyle(grid).columnGap) || 0;
+      const distance = card.getBoundingClientRect().width + gap;
+      grid.scrollBy({ left: direction * distance, behavior: 'smooth' });
+    };
+
+    prevBtn.addEventListener('click', () => scrollByCard(1));
+    nextBtn.addEventListener('click', () => scrollByCard(-1));
   }
 
   setupCarousel('skincarePrevBtn', 'skincareNextBtn', 'skincare-grid');

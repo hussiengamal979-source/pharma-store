@@ -50,8 +50,7 @@
         "name": "افوفا | العجينة الحمراء المخملية الحمراء للوجه",
         "image": "./assets/section2/bestseller_3.png",
         "price": 40,
-        "cartName": "افوفا العجينة الحمراء للوجه",
-        "featured": true
+        "cartName": "افوفا العجينة الحمراء للوجه"
       },
       {
         "name": "1+1 انفينيتي | جل واقي من الشمس بعامل حماية 50 مضاد",
@@ -64,6 +63,18 @@
         "image": "./assets/section2/bestseller_5.png",
         "price": 1550,
         "cartName": "انيفاجين 7 أمبولات للشعر"
+      },
+      {
+        "name": "نيفيا | بودي لوشن الجسم المغذي بزيت اللوز للبشرة الجافة",
+        "image": "./assets/section2/bestseller_1.png",
+        "price": 290,
+        "cartName": "نيفيا بودي لوشن المغذي"
+      },
+      {
+        "name": "غسول انفنتي للبشره الجافة بحمض الهيالورونيك والكولاجين |",
+        "image": "./assets/section2/bestseller_2.png",
+        "price": 450,
+        "cartName": "غسول انفنتي للبشرة الجافة"
       }
     ],
     "grapexon-grid": [
@@ -96,6 +107,18 @@
         "image": "./assets/section3/grapexon_5.png",
         "price": 180,
         "cartName": "جريبكسون كروميوم 30 كبسولة"
+      },
+      {
+        "name": "جريبكسون ادفانس | 30 كبسولة",
+        "image": "./assets/section3/grapexon_1.png",
+        "price": 285,
+        "cartName": "جريبكسون ادفانس 30 كبسولة"
+      },
+      {
+        "name": "جريبكسون كريم | 100مل",
+        "image": "./assets/section3/grapexon_2.png",
+        "price": 290,
+        "cartName": "جريبكسون كريم 100مل"
       }
     ],
     "for-her-grid": [
@@ -128,6 +151,18 @@
         "image": "./assets/section_for_her/prod_5.png",
         "price": 100,
         "cartName": "كير فري بلس فوط يومية"
+      },
+      {
+        "name": "نيفيا | راحة جافة رول اون مزيل عرق للنساء | 50مل",
+        "image": "./assets/section_for_her/prod_1.png",
+        "price": 75,
+        "cartName": "نيفيا رول اون للنساء 50مل"
+      },
+      {
+        "name": "ماء ميسيلار نيفيا مزيل للمكياج بماء الورد | 400 مل",
+        "image": "./assets/section_for_her/prod_2.png",
+        "price": 320,
+        "cartName": "ماء ميسيلار بماء الورد 400 مل"
       }
     ],
     "haircare-grid": [
@@ -160,6 +195,18 @@
         "image": "./assets/section_haircare/prod_5.png",
         "price": 455,
         "cartName": "سيروبايب أمبولات تحفيز نمو الشعر"
+      },
+      {
+        "name": "كلاري | بوستر شوت | 50مل",
+        "image": "./assets/section_haircare/prod_1.png",
+        "price": 450,
+        "cartName": "كلاري بوستر شوت 50مل"
+      },
+      {
+        "name": "رو افريكان | قناع الشعر مايا | 250جم",
+        "image": "./assets/section_haircare/prod_2.png",
+        "price": 305,
+        "cartName": "رو افريكان ماسك مايا 250جم"
       }
     ],
     "baby-grid": [
@@ -192,6 +239,18 @@
         "image": "./assets/section_baby/prod_5.png",
         "price": 120,
         "cartName": "سانوسان شامبو أطفال بالعسل واللبن"
+      },
+      {
+        "name": "انشور | بودر مكمل غذائي فانيليا | 400جم",
+        "image": "./assets/section_baby/prod_1.png",
+        "price": 530,
+        "cartName": "انشور مكمل غذائي فانيليا 400جم"
+      },
+      {
+        "name": "جونسون | زيت سليب تايم البنفسجي باللافندر للأطفال |",
+        "image": "./assets/section_baby/prod_2.png",
+        "price": 130,
+        "cartName": "جونسون زيت سليب تايم باللافندر"
       }
     ]
   }
